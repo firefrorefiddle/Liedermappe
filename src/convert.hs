@@ -2,6 +2,9 @@ module Main where
 
 import Data.List
 import Data.Char
+import System.Environment (getArgs)
+import System.Directory
+import System.FilePath (splitExtension, takeExtension, (</>))
 
 defaultM :: a -> Maybe a -> a
 defaultM v m = maybe v id m
@@ -64,4 +67,34 @@ insertChords cs l = go (reverse cs) l
                               (before, after) = splitAt i l'
                           in go cs (before ++ toChord c ++ after)
 
-main = interact (unlines . convertLines . lines)
+convertStream = unlines . convertLines . lines
+
+actDirectory fp = do
+  cont <- getDirectoryContents fp
+  let cont' = map (fp </>) .
+              filter ((== ".sng") . takeExtension) $
+              cont  
+  mapM_ actFile cont'
+  
+actFile fp =
+  case splitExtension fp of
+    (base, ".sng") -> readFile fp >>=
+                      writeFile (base ++ ".tex") . convertStream
+    _ -> error $ "Filepath must have .sng extension: " ++ fp
+
+actFilePath fp = do
+  dir <- doesDirectoryExist fp
+  if dir
+    then actDirectory fp
+    else do
+      file <- doesFileExist fp
+      if file
+        then actFile fp
+        else error $ "File or Directory not found: " ++ fp
+
+main = do
+  args <- getArgs
+  case args of
+    [] -> interact convertStream
+    [fp] -> actFilePath fp
+    _ -> error "Please give exactly zero or one argument (File or Directory)."
