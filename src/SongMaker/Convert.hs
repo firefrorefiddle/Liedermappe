@@ -7,7 +7,10 @@ import SongMaker.Read
 import SongMaker.Write
 
 convertStream :: Stream -> Stream
-convertStream = unlines . convertLines . lines
+convertStream s = let (h, ls) = readStream s
+                  in (writeHeader h) ++
+                     (unlines . convertLines $ ls) ++
+                     (writeFooter h)
 
 convertLines :: [Line] -> [Line]
 convertLines [] = []

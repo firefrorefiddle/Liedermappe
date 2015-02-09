@@ -1,4 +1,4 @@
 #!/bin/sh
 
-runhaskell src/convert lieder
+bin/songmaker lieder
 pdflatex tex/Gemeinde

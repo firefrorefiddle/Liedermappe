@@ -6,3 +6,5 @@ type Line = String
 
 type ChordIndex = (Int, Word)
 type ChordIndexes = [ChordIndex]
+
+type Header = [(Word, Word)]
