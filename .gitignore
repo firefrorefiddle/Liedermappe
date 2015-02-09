@@ -1,0 +1,9 @@
+*~
+*.hi
+*.o
+lieder/*.tex
+*.aux
+*.log
+*\#
+\.\#*
+songmaker
