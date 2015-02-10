@@ -2,11 +2,30 @@
 \usepackage[chorded]{songs}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage{DejaVuSans}
+\renewcommand*\lyricfont{\sffamily\small}
+\renewcommand*\printchord[1]{\sffamily\sl#1}
+\usepackage[T1]{fontenc}
+\renewcommand{\clineparams}{
+  \baselineskip=10pt
+  \lineskiplimit=1pt
+  \lineskip=1pt
+}
+\usepackage{pdfpages}
 
 \begin{document}
 
 \begin{songs}{}
+
 \input{lieder/jesus_hoechster_name}
+
+\begin{intersong*}
+\includegraphics[height=0.9\textheight]{lib/preisundanbetung.pdf}
+\end{intersong*}
+\setcounter{songnum}{3}
+
+\input{lieder/jesus_hoechster_name}
+
 \end{songs}
 
 \end{document}
