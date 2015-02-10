@@ -16,11 +16,12 @@ convertStream s = let (h, ls) = readStream s
                      (writeFooter h)
 
 convertLines :: [Line] -> [Line]
-convertLines [] = []
-convertLines (x:xs)   | all isSpace x =
-  case xs of
-    [] -> ["\\endverse"]
-    ys -> ["\\endverse","","\\beginverse"]++convertLines xs
-convertLines (x:y:xs) | isChordsLine x = insertChords (chordsFromLine x) y :
+convertLines [] = ["\\endverse"]
+convertLines [x] | all isSpace x = convertLines []
+                 | otherwise = x:convertLines []
+convertLines (x:y:xs) | all isSpace x = ["\\endverse","","\\beginverse"] ++ convertLines (y:xs)
+                      | isChordsLine x = insertChords (chordsFromLine x) y :
                                          convertLines xs
                       | otherwise = x : convertLines (y:xs)
+
+

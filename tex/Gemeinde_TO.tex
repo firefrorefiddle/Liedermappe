@@ -1,12 +1,22 @@
-\documentclass[a5paper]{scrbook}
+\documentclass[a4paper,fontsize=16pt]{scrbook}
 \usepackage[lyric]{songs}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage{DejaVuSans}
 
 \begin{document}
 
 \begin{songs}{}
 \input{lieder/jesus_hoechster_name}
+
+\begin{intersong*}
+\includegraphics[height=0.94\textheight]{lib/preisundanbetung.pdf}
+\end{intersong*}
+\setcounter{songnum}{3}
+
+\input{lieder/du_bist_oh_herr_gegangen}
+
 \end{songs}
 
 \end{document}
