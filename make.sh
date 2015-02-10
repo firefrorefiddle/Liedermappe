@@ -2,5 +2,9 @@
 
 bin/songmaker lieder
 pdflatex tex/Gemeinde
+pdflatex tex/Gemeinde_TO
+pdflatex tex/Gemeinde_OH
 mv Gemeinde.pdf out
-rm -f Gemeinde.aux Gemeinde.log
+mv Gemeinde_TO.pdf out
+mv Gemeinde_OH.pdf out
+rm -f *.aux *.log
