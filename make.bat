@@ -1,4 +1,3 @@
-#!/bin/sh
 
 bin/songmaker lieder
 pdflatex tex/Jugend
@@ -6,9 +5,9 @@ pdflatex tex/Jugend_TO
 pdflatex tex/Gemeinde
 pdflatex tex/Gemeinde_TO
 pdflatex tex/Gemeinde_OH
-mv Gemeinde.pdf out
-mv Jugend.pdf out
-mv Jugend_TO.pdf out
-mv Gemeinde_TO.pdf out
-mv Gemeinde_OH.pdf out
-rm -f *.aux *.log
+move Gemeinde.pdf out
+move Jugend.pdf out
+move Jugend_TO.pdf out
+move Gemeinde_TO.pdf out
+move Gemeinde_OH.pdf out
+del -f *.aux *.log
