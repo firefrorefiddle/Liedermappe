@@ -21,7 +21,7 @@ insertChords cs l = go (reverse cs) l
 get k = filter ((==k).fst)
 
 writeHeader :: Header -> Stream
-writeHeader h = "\\beginsong{"++titles++"}["++other++"]"
+writeHeader h = cols ++ "\\beginsong{"++titles++"}["++other++"]"
   where titles = intercalate " \\\\ " . map snd . get "title" $ h
         other = intercalate "," . filter (not.null) . map toSongs $ h
         toSongs (k,v) = case mapKey k of
@@ -33,6 +33,10 @@ writeHeader h = "\\beginsong{"++titles++"}["++other++"]"
                              , ("license", "li")
                              , ("extra-index", "index")
                              , ("extra-title-index", "ititle")]
+        cols = case lookup "columns" h of
+                Nothing -> "\\songcolumns{1}"
+                Just c -> "\\songcolumns{"++c++"}"
+                 
 
 writeFooter :: Header -> Stream
 writeFooter _ = ""

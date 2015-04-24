@@ -11,6 +11,7 @@ knownHeaders = ["title",
                 "output",
                 "license",
                 "extra-index",
+                "columns",
                 "extra-title-index"]
 
 splitEach :: (Eq a) => a -> [a] -> [[a]]
