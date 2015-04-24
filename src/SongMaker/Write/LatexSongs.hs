@@ -35,4 +35,4 @@ writeHeader h = "\\beginsong{"++titles++"}["++other++"]"
                              , ("extra-title-index", "ititle")]
 
 writeFooter :: Header -> Stream
-writeFooter _ = "\\endsong"
+writeFooter _ = ""
