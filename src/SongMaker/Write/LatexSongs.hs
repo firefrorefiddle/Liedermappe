@@ -34,9 +34,9 @@ writeHeader h = cols ++ "\\beginsong{"++titles++"}["++other++"]"
                              , ("extra-index", "index")
                              , ("extra-title-index", "ititle")]
         cols = case lookup "columns" h of
-                Nothing -> "\\songcolumns{1}"
+                Nothing -> ""
                 Just c -> "\\songcolumns{"++c++"}"
                  
 
 writeFooter :: Header -> Stream
-writeFooter _ = ""
+writeFooter _ = "\\songcolumns{\\lmnumcols}"
