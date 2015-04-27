@@ -8,7 +8,8 @@ import SongMaker.Write
 
 import Data.Char
 
-processSpecialChars = replaceSubStr "$" "\\brk"
+processSpecialChars = replaceSubStr "\t" "    " .
+                      replaceSubStr "$" "\\brk"
 
 convertStream :: Stream -> Stream
 convertStream s = let (h, ls) = readStream s
