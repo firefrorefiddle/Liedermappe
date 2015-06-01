@@ -5,6 +5,7 @@ import SongMaker.Convert
 import System.Environment (getArgs)
 import System.Directory
 import System.FilePath (splitExtension, takeExtension, (</>))
+import System.IO
 
 run :: IO ()
 run = do
@@ -23,8 +24,12 @@ actDirectory fp = do
   
 actFile fp =
   case splitExtension fp of
-    (base, ".sng") -> readFile fp >>=
-                      writeFile (base ++ ".tex") . convertStream
+    (base, ".sng") -> withFile fp ReadMode $ \inh -> 
+                      withFile (base ++ ".tex") WriteMode $ \outh -> do
+                         hSetEncoding inh utf8
+                         hSetEncoding outh utf8
+                         contents <- hGetContents inh
+                         hPutStr outh . convertStream $ contents
     _ -> error $ "Filepath must have .sng extension: " ++ fp
 
 actFilePath fp = do
