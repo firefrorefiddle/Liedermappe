@@ -35,6 +35,8 @@ isBaseChord = (`elem` baseChords)
 isChord' w = isBaseChord w
              || isEnglishFlatChord w
              || isSharpChord w
+             || isIsChord w
+             || isEsChord w
 
 stripPrefix' :: (Eq a) => [a] -> [a] -> [a]
 stripPrefix' p w = maybe w id (stripPrefix p w)
@@ -43,6 +45,8 @@ stripSuffix s = reverse . stripPrefix' (reverse s) . reverse
 
 isEnglishFlatChord = isBaseChord . stripSuffix "b"
 isSharpChord = isBaseChord . stripSuffix "#"
+isIsChord = isBaseChord . stripSuffix "is"
+isEsChord = isBaseChord . stripSuffix "es"
 
 removeSuffixes :: String -> String
 removeSuffixes w =
