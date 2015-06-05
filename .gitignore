@@ -4,6 +4,10 @@
 lieder/*.tex
 *.aux
 *.log
+*.sxc
+*.sbx
+*.sxd
+*.out
 *\#
 \.\#*
 songmaker
