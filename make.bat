@@ -1,5 +1,5 @@
 
-bin\songmaker lieder
+songmaker lieder
 pdflatex tex/Jugend
 pdflatex tex/Jugend_TO
 pdflatex tex/Jugend_OH
