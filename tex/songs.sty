@@ -2054,7 +2054,8 @@
   \usefont{OT1}{cmss}{m}{n}\selectfont%
   \ifchorded%
     \baselineskip.5\SB@dimen%
-    \vbox{\hbox{:}\hbox{:}\kern.5\p@}%
+%    \vbox{\hbox{:}\hbox{:}\kern.5\p@}%
+    \vbox{\hbox{:}\kern.5\p@}%
   \else%
     \raise.5\p@\hbox{:}%
   \fi%
@@ -2062,18 +2063,18 @@
 \newcommand\lrep{%
   \SB@dimen\baselineskip%
   \advance\SB@dimen-2\p@%
-  \vrule\@width1.5\p@\@height\SB@dimen\@depth\p@%
+  \vrule\@width1.5\p@\@height0.45\SB@dimen\@depth\p@%
   \kern1.5\p@%
-  \vrule\@width.5\p@\@height\SB@dimen\@depth\p@%
+  \vrule\@width.5\p@\@height0.45\SB@dimen\@depth\p@%
   \SB@repcolon%
 }
 \newcommand\rrep{%
   \SB@dimen\baselineskip%
   \advance\SB@dimen-2\p@%
   \SB@repcolon%
-  \vrule\@width.5\p@\@height\SB@dimen\@depth\p@%
+  \vrule\@width.5\p@\@height0.45\SB@dimen\@depth\p@%
   \kern1.5\p@%
-  \vrule\@width1.5\p@\@height\SB@dimen\@depth\p@%
+  \vrule\@width1.5\p@\@height0.45\SB@dimen\@depth\p@%
 }
 \newif\ifSB@wordends
 \newif\ifSB@brokenword
