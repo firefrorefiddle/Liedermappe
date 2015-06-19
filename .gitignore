@@ -5,8 +5,6 @@ lieder/*.tex
 *.aux
 *.log
 *.sxc
-*.sbx
-*.sxd
 *.out
 inhalt*.alt
 *\#
