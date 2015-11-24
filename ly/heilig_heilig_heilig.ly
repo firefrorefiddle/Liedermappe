@@ -7,7 +7,7 @@
 
 \paper {
   #(set-paper-size "a4")
-  margin=1.5\in
+  margin=3.5\in
 }
 
 \layout {
@@ -66,6 +66,17 @@ Tenor =
       e4 d8 c b4 b8 b | e2 e         | f4 f f4. f8      | e1  \bar "|."       
     }
 
+Bass =
+   \new Voice = "bass"
+    \relative c {
+      \voiceFour
+
+      c4 c a a            | g2 c       | f4 f f f8 f       | c2 d      | 
+      e8 d c4 a a         | g2 c       | f4 f8 e d4 d8 d   | g2. r8 g  |
+      c,4 c8 c c4 d8 e    | f2 f4. es8 | d4 d8 d d4 e8 fis | g2 g4. f8 | 
+      e4 e8 e e4 fis8 gis | a2 g       | f4 f g4. g8       | c,1 \bar "|."       
+    }
+
 Text =
   \new Lyrics \lyricsto "sopran" \lyricmode {
    Hei -- lig, hei -- lig, hei -- lig ist der Herr Ze -- ba -- oth!
@@ -87,6 +98,7 @@ Text =
    \Text
    \new Staff <<
 	\Tenor
+	\Bass
    >>
 >>
 }
