@@ -101,4 +101,5 @@ Text =
 	\Bass
    >>
 >>
+\midi { \tempo 4 = 80 }
 }
