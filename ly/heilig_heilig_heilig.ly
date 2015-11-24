@@ -52,6 +52,20 @@ Alt =
       gis4 gis8 gis e4 e8 e | a2 a     | a4 a b4. f8           | g1  \bar "|."       
     }
 
+Tenor =
+   \new Voice = "tenor"
+    \relative e {
+      \time 4/4
+      \key c \major  
+      \clef bass
+      \voiceThree
+
+      e4 g a a        | b4.( g8) g2  | f4 c'8 b a4 b8 c | c2 b      | 
+      g8 f g4 a a     | b4.( g8) g2  | f4 c' a8 d f e   | d2. r8 d8 |
+      c4 c8 c g4 g8 g | c2 c4. c8    | d4 c8 b a4 a8 a  | d2 d4. d8 | 
+      e4 d8 c b4 b8 b | e2 e         | f4 f f4. f8      | e1  \bar "|."       
+    }
+
 Text =
   \new Lyrics \lyricsto "sopran" \lyricmode {
    Hei -- lig, hei -- lig, hei -- lig ist der Herr Ze -- ba -- oth!
@@ -71,5 +85,8 @@ Text =
 	\Alt
    >>
    \Text
+   \new Staff <<
+	\Tenor
+   >>
 >>
 }
