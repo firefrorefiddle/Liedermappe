@@ -29,29 +29,24 @@ Ref = \lyricmode {
 
 VOne = \lyricmode {
   Der Herr_ist mein Hir -- te, nichts man -- gelt mir. Er lagert mich auf grü -- nen
-  Au -- en. Er führt mich zu stil -- len Was __ _ -- sern, er er -- quickt mei -- ne See -- le.
+  Au -- en. Er führt mich zu stil -- len Was __ _ -- sern, er_er -- quickt mei -- ne See -- le.
   Er  führt mich auf rech -- ten Pfa -- den um sei -- nes Na -- mens wil -- len.
   \repeat unfold 2 { \skip 1}
 }
 
 VTwo = \lyricmode {
   Auch wenn __ ich wan -- d're im To -- des -- tal, ich fürch -- te doch __ _ kein Un -- heil.
-  Denn du __ _ bist bei_mir, dein Stecken und Stab, sie  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _
+  Denn du __ _ bist bei_mir, dein Stecken und Stab, sie  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _
   trö -- sten mich, ja sie sind_mein Trost.
 }
 
 VThree = \lyricmode {
   Du deckst __ mir reich -- lich und voll den Tisch vor_dem An -- ge -- sicht mei -- ner Fein -- de.
-  Du hast __ _ mein Haupt mit Öl ge -- salbt _   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _
-  und __ mein Be -- cher fließt ü -- ber.
+  Du hast __ _ mein Haupt mit Öl ge -- salbt _   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _
+  und __ mein Be -- cher fließt ü __ -- ber.
 }
 
-Sopran = 
-  \new Voice = "sopran"
-   \relative {
-    \clef "treble" 
-    \key g \major 
-    \time 3/4
+VerseAll = {
     \partial 4 b4
 %    \repeat volta 3 {
     | % 1
@@ -71,11 +66,11 @@ Sopran =
     fis4( e4) d4 | % 11
     e4~e d4 | % 12
     \slurDashed
-    b2 b'8 b | %13 
+    b2 b'8( b) | %13 
     \slurSolid
-%  }
-%    \alternative { {
-    \set Score.repeatCommands = #'((volta "1."))
+}
+
+VerseFirst = {
     b4 a b | % 14
     a4 a2( |  % 15 
     a4) r4 a4 |
@@ -86,17 +81,16 @@ Sopran =
     fis4.( g8) fis4 |
     e4 e2( |
     e4) r2
-%  } {
     \bar "||"
-    \set Score.repeatCommands = #'((volta "2.-3."))
+}
+
+VerseOthers = {
     b'4( a4) g4 | % 16
     fis4 e4 d4 | % 17
     fis4.( g8 fis4)  | % 18
     e2 r4 |
     \bar "||"
-    \set Score.repeatCommands = #'((volta #f))
-%  } }
-  }
+}
 
 Refrain = 
   \new Voice = "refrain"
@@ -112,32 +106,116 @@ Refrain =
     a2 b,4 | % 24
     e2 fis4 | % 25
     g4 fis4 e4 | % 27
-    d4 d4 e4 | % 28
+    d4 d4 e4 | % 28g
     fis2 fis4 | % 29
     g4 fis4 e4 | % 30
     fis4 e4 d4 | % 31
     fis4.( g8 fis4) | % 
-    e2. \bar "|."
+    e2 \bar "|."
     }
+
+Sopran = 
+  \new Voice = "sopran"
+   \relative {
+    \clef "treble" 
+    \key g \major 
+    \time 3/4
+       
+    % so kommt's aufs blatt, mit benutzerdefinierten
+    % wiederholungszeichen.
+    \tag sheet {
+      \VerseAll
+
+      \set Score.repeatCommands = #'((volta "1."))
+      \VerseFirst
+  
+      \set Score.repeatCommands = #'((volta "2.-3."))
+      \VerseOthers
+      
+      \set Score.repeatCommands = #'((volta #f))
+      \break % zeilenumbruch, damit für den refraintext nicht
+             % noch eine zeile weiter unten platz gemacht wird
+      \Refrain
+    }
+    
+    % für richtigen midi output müssen wir die wiederholung
+    % "auspacken", weil der obige hack nur auf dem papier richtig
+    % aussieht, aber von lilypond semantisch nicht verstanden wird
+    % zwei strophen reichen für midi.
+    \tag midi {
+      \VerseAll
+      \VerseFirst
+      \Refrain
+      \VerseAll
+      \VerseOthers
+      \Refrain
+    }
+    
+  }
+
+Akkorde =
+  \chords {
+       \set chordNameLowercaseMinor = ##t
+       \set chordChanges = ##t
+       \germanChords
+       
+       \tag sheet {
+         e4:m e2.:m d c e:m
+         e:m d b:7 e:m e:m d c e:m     % ende gemeinsamer teil
+         e:m e:m a c d c d b:7 e:m e:m % ende teil erste strophe
+         e:m d b:7 e:m                 % ende teil zweite und dritte strophe
+         e:m e:m d d c c d b:7
+         e:m e:m d d c d b:7 e:m       % ende refrain
+       }
+       \tag midi {
+         e4:m e2.:m d c e:m
+         e:m d b:7 e:m e:m d c e:m     % ende gemeinsamer teil
+         e:m e:m a c d c d b:7 e:m e:m % ende teil erste strophe
+         e:m e:m d d c c d b:7
+         e:m e:m d d c d b:7 e:m       % ende refrain
+         e2.:m d c e:m
+         e:m d b:7 e:m e:m d c e:m     % ende gemeinsamer teil
+         e:m d b:7 e:m                 % ende teil zweite und dritte strophe
+         e:m e:m d d c c d b:7
+         e:m e:m d d c d b:7 e:m       % ende refrain
+       }
+     }
+     
+AkkordeB =
+  \chords {
+       \set chordNameLowercaseMinor = ##t
+       \set chordChanges = ##t
+       \germanChords
+       
+       \tag sheet {
+         e4:m e2.:m d c e:m
+         e:m d c e:m e:m d c e:m       % ende gemeinsamer teil
+         e:m e:m a c d c d c e:m e:m   % ende teil erste strophe
+         e:m d c e:m                   % ende teil zweite und dritte strophe
+         e:m e:m d d c c d d:sus4
+         e:m e:m d d c d c e:m         % ende refrain
+       }
+       \tag midi {
+         e4:m e2.:m d c e:m
+         e:m d c e:m e:m d c e:m       % ende gemeinsamer teil
+         e:m e:m a c d c d c e:m e:m   % ende teil erste strophe
+         e:m e:m d d c c d b:7
+         e:m e:m d d c d b:7 e:m       % ende refrain
+         e2.:m d c e:m
+         e:m d c e:m e:m d c e:m       % ende gemeinsamer teil
+         e:m d c e:m                   % ende teil zweite und dritte strophe
+         e:m e:m d d c c d d:sus4
+         e:m e:m d d c d c e:m         % ende refrain
+       }
+     }     
 
 
 % The score definition
 \score {
   <<   
-    \chords {
-       \set chordNameLowercaseMinor = ##t
-       \set chordChanges = ##t
-       \germanChords
-       e4:m e2.:m d c e:m
-       e:m d b:7 e:m e:m d c e:m     % ende gemeinsamer teil
-       e:m e:m a c d c d b:7 e:m e:m % ende teil erste strophe
-       e:m d b:7 e:m                 % ende teil zweite und dritte strophe
-       e:m e:m d d c c d b:7
-       e:m e:m d d c d b:7 e:m       % ende refrain
-     }
+    \keepWithTag sheet \Akkorde
     \new Staff {
-      \Sopran
-      \Refrain
+      \keepWithTag sheet \Sopran
     }
     \new Lyrics \lyricsto "sopran" {
       <<
@@ -170,8 +248,9 @@ Refrain =
 \score {
   \unfoldRepeats {
     <<
+      \keepWithTag midi \Akkorde
       \new Staff <<
-	\Sopran 
+	\keepWithTag midi \Sopran 
       >>    
     >>
   }
