@@ -14,6 +14,14 @@
   indent = #0
 }
 
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
+
 
 %% Zuerst werden die einzelnen Elemente (Stimmen, Akkorde...) definiert,
 %% weiter unten dann zu einem \score kombiniert.
@@ -21,6 +29,7 @@
 Akkorde = 
   \chords {
     \set chordNameLowercaseMinor = ##t
+    \set chordNameExceptions = #chExceptions
     \germanChords
     c2 c2/b a:m a:m/g:maj f1 g2:sus4 g
     c2 c2/b a:m a:m/g:maj f1 g 
@@ -47,9 +56,9 @@ Alt =
      \relative {
      \voiceTwo
       g4 c c8 d e4   | d2 c2         | c4 f f g8 f8          | e2 f   | 
-      c4 c c8 d e4    | d2 c2        | c4 a'8 g f4 a8 a    | g2. r8 f  |
-      e4 e8 e8 c4 c8 c  | f2 f4. f8    | fis4 fis8 fis d4 d8 d | g2 g4. g8 | 
-      gis4 gis8 gis e4 e8 e | a2 a     | a4 a b4. f8           | g1  \bar "|."       
+      c4 c c8 d e4    | d2 c2        | c4 a'8 g f4 a8 a      | g2. r8 f  |
+      e4 e8 e8 c4 c8 c  | f2 f4. f8  | fis4 fis8 fis d4 d8 d | g2 g4. g8 | 
+      gis4 gis8 gis e4 e8 e | a2 a   | a4 a b4. f8           | g1  \bar "|."       
     }
 
 Tenor =
@@ -87,6 +96,23 @@ Text =
    Hei -- lig ist der Herr!
   }
 
+
+%% Die Layoutdefinition für das Gesamtwerk
+\score {
+<<
+   \Akkorde
+   \new Staff <<
+	\Sopran
+	\Alt
+   >>
+   \Text
+   \new Staff <<
+	\Tenor
+	\Bass
+   >>
+>>
+
+}
 %% Die Layoutdefinition für das Gesamtwerk
 \score {
 <<
