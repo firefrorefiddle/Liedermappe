@@ -29,19 +29,20 @@ Ref = \lyricmode {
 
 VOne = \lyricmode {
   Der Herr_ist mein Hir -- te, nichts man -- gelt mir. Er lagert mich auf grü -- nen
-  Au -- en. Er führt mich zu stil -- len Was __ _ -- sern, _ er er -- quickt mei -- ne See -- le.
+  Au -- en. Er führt mich zu stil -- len Was __ _ -- sern, er er -- quickt mei -- ne See -- le.
+  Er  führt mich auf rech -- ten Pfa -- den um sei -- nes Na -- mens wil -- len.
   \repeat unfold 2 { \skip 1}
 }
 
 VTwo = \lyricmode {
   Auch wenn __ ich wan -- d're im To -- des -- tal, ich fürch -- te doch __ _ kein Un -- heil.
-  Denn du __ _ bist bei_mir, dein Stecken und Stab, sie  _ _ _ _ _ _ _
+  Denn du __ _ bist bei_mir, dein Stecken und Stab, sie  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _
   trö -- sten mich, ja sie sind_mein Trost.
 }
 
 VThree = \lyricmode {
   Du deckst __ mir reich -- lich und voll den Tisch vor_dem An -- ge -- sicht mei -- ner Fein -- de.
-  Du hast __ _ mein Haupt mit Öl ge -- salbt _  _ _ _ _ _ _ _
+  Du hast __ _ mein Haupt mit Öl ge -- salbt _   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ _ _
   und __ mein Be -- cher fließt ü -- ber.
 }
 
@@ -69,17 +70,26 @@ Sopran =
     e4 fis4 g4 | % 10
     fis4( e4) d4 | % 11
     e4~e d4 | % 12
-    b2 \parenthesize b'4 | %13 
-
+    \slurDashed
+    b2 b'8 b | %13 
+    \slurSolid
 %  }
 %    \alternative { {
     \set Score.repeatCommands = #'((volta "1."))
-    b8 b8 b4 a | % 14
-    b4 a4 a4 | % 15 
+    b4 a b | % 14
+    a4 a2( |  % 15 
+    a4) r4 a4 |
+    g2 g4 |
+    fis fis g |
+    a2 g4 |
+    fis4 e d |
+    fis4.( g8) fis4 |
+    e4 e2( |
+    e4) r2
 %  } {
     \bar "||"
     \set Score.repeatCommands = #'((volta "2.-3."))
-    b4( a4) g4 | % 16
+    b'4( a4) g4 | % 16
     fis4 e4 d4 | % 17
     fis4.( g8 fis4)  | % 18
     e2 r4 |
@@ -99,7 +109,7 @@ Refrain =
     e2 fis4 | % 23
     g4( fis4) e4 | % 22
     fis2 g4 | % 23
-    b2 b,4 | % 24
+    a2 b,4 | % 24
     e2 fis4 | % 25
     g4 fis4 e4 | % 27
     d4 d4 e4 | % 28
@@ -116,14 +126,14 @@ Refrain =
   <<   
     \chords {
        \set chordNameLowercaseMinor = ##t
+       \set chordChanges = ##t
        \germanChords
        e4:m e2.:m d c e:m
-       e:m d b:7 e:m e:m d c e:m
-       e:m a
-%       c d c d c e:m b:7 e
-       e:m d b:7 e:m
+       e:m d b:7 e:m e:m d c e:m     % ende gemeinsamer teil
+       e:m e:m a c d c d b:7 e:m e:m % ende teil erste strophe
+       e:m d b:7 e:m                 % ende teil zweite und dritte strophe
        e:m e:m d d c c d b:7
-       e:m e:m d d c d b:7 e:m
+       e:m e:m d d c d b:7 e:m       % ende refrain
      }
     \new Staff {
       \Sopran
@@ -153,7 +163,6 @@ Refrain =
       \Ref
     }
   >>
-  \layout {}
 				% To create MIDI output, uncomment the following line:
 }
 
