@@ -45,8 +45,8 @@ Sopran =
       \key c \major  
       \voiceOne
 
-      c4 e e8( f) g4    | g4.( f8) e2  | a4 a c b8 a8      | g1        | 
-      c,4 e e8( f) g4   | g4.( f8) e2  | a4 a c4 c8 c      | b2. r8 g8 |
+      c4 e e8( f) g4    | g4.( f8) e2  | a4 a c b8 a8      | g1        | \break 
+      c,4 e e8( f) g4   | g4.( f8) e2  | a4 a c4 c8 c      | b2. r8 g8 | \break
       g4 g8 g e4 f8 g   | a2 a4. a8    | a4 a8 a fis4 g8 a | b2 b4. b8 | 
       b4 b8 b gis4 a8 b | c2 c         | c4 c d4. c8       | c1  \bar "|."       
     }
