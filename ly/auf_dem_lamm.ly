@@ -10,22 +10,38 @@
 
 \layout {
   indent = #0
+}
+
+
+\layout {
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
 
-\score {
-  
-  <<
-    
-    \chords {
-\set chordNameLowercaseMinor = ##t
-\set chordChanges = ##t
-\germanChords
 
-    
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
+
+\score {
+ <<
+
+   \chords {
+     \set chordNameLowercaseMinor = ##t
+    \set chordNameExceptions = #chExceptions
+     \germanChords
+
+
+    a2. a d2. a2:sus4 a4
+    a2. a e2.:7 a
+    a b:7 e:7 a
+    d a e:7 a
   
   }
   
@@ -43,15 +59,15 @@
       g2 c4 |
       g2 e'4 |
       d( e) d |
-      c2 r4 |
-      e2 e4 |
+      c2 a4\rest |
+      e'2 e4 |
       e( d) d |
       d4( b) g |
       c2 g4 |
       c( b) a |
       g2 c4 |
       e2 d4 |
-      c2 r4 |
+      c2 a'4\rest |
     }
     
    \new Lyrics \lyricsto "sopran" {  
@@ -126,7 +142,7 @@
       e2 e4 |
       e2 g4 |
       f4( g) f | 
-      e2 r4 |
+      e2 s4 |
       g2 g4 |
       fis2 fis4 |
       f2 f4 |
@@ -134,7 +150,7 @@
       a4( g) f |
       e2 e4 |
       g2 f4 |
-      e2 r4
+      e2 s4
 
       \bar "|."       
     }
@@ -152,7 +168,7 @@
       c2 g4 |
       c2 c4 |
       b2 b4 |
-      c2 r4 |
+      c2 e,4\rest |
       g2 c4 |
       a2 c4 |
       b4( d) b |
@@ -160,7 +176,7 @@
       a4( b) c |
       c2 g4 |
       g2 g4 |
-      c2 r4 |
+      c2 e,4\rest |
       \bar "|."       
     }
     
@@ -178,7 +194,7 @@
       c2 c4 |
       c2 c4 |
       g'2 g4 |
-      c,2 r4 |
+      c,2 s4 |
       c2 c4 |
       d2 d4 |
       g2 g4 |
@@ -186,7 +202,7 @@
       f,2 f4 |
       c2 c4 |
       g2 g4 |
-      c2 r4 |
+      c2 s4 |
       \bar "|."       
     }
    
