@@ -25,7 +25,10 @@
 \set chordChanges = ##t
 \germanChords
 
-    
+    a1 d1 a a
+    a d e e
+    a d e a
+    d a b2:m e2 a1
   
   }
   
@@ -39,12 +42,12 @@
 e4 e2 e4 |
 fis fis2 e8 d |
 e1( |
-e2.) r4 | % z1 
+e2.) a4\rest | % z1 
 \break
 e4 e2 e4 | 
 fis fis2 gis8 a |
 gis2( gis8)( fis8 gis fis |
-e2.) r4 | % z2
+e2.) a4\rest | % z2
 \break
 a2. gis4 | 
 gis fis2 fis4 | 
@@ -55,7 +58,7 @@ fis2 gis4( a) |
 a( e2) a4 | % z3
    \slurSolid
 b4 b a8 gis4. |
-a2. r4 | % z4
+a2. a4\rest | % z4
 \bar "|."    
     }
     
@@ -114,11 +117,11 @@ a2. r4 | % z4
       cis4 cis2 cis4 |
       d4 d2 cis8 b8 |
       cis1( | 
-      cis2.) r4 | % z1
+      cis2.) s4 | % z1
       cis4 cis2 cis4 |
       d4 d2 d8 d |
       d2( d)( |
-      d2.) r4 | % z2
+      d2.) s4 | % z2
       e2. e4 |
       e4 d2 d4 |
       d2. d4 |
@@ -126,7 +129,7 @@ a2. r4 | % z4
       d2 e |
       e4 e2 e4 | % z3
       d4 fis e8 d4. |
-      e2. r4 | % z4
+      e2. s4 | % z4
       
       
       \bar "|."       
@@ -139,12 +142,24 @@ a2. r4 | % z4
       \time 4/4
       \key a \major 
       \clef bass
-      \voiceThree
+      \voiceFour
       
-      
+      a4 a2 a4
+      d4 d2 d8 d8
+      a1( a2.) s4
+      a4 a2 a4
+      d4 d2 b8 b8
+      e2( e2 e2.) s4
+      cis2. cis4 d4 d2 d4
+      e2. e4
+      a,4 a2.
+      d2 d2
+      cis4 cis2 cis4
+      b4 b4 e8 e4.
+      a,2. s4
 
       
-      \bar "|."       
+         
     }
     
     \new Voice = "tenor"
@@ -158,8 +173,15 @@ a2. r4 | % z4
       e4 e2 a4 |
       a4 a2 a8 a |
       b2( b8)( a b a |
-      gis2.) r4 | % z2
-      
+      gis2.) e4\rest | % z2
+      a2. a4
+      a4 a2 a4
+      gis2. b4
+      a4 a2.
+      a2 b2
+      cis4 a2 a4
+      a4 d4 cis8 b4.
+      cis2. e,4\rest
 
       
       \bar "|."       
