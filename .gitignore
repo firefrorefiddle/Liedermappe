@@ -10,3 +10,12 @@ inhalt*.alt
 *\#
 \.\#*
 songmaker
+ly/snippet*
+*.eps
+*.midi
+*.dep
+ly/pdf
+ly/out
+ly/[0-9]*
+*.json
+*.swp
