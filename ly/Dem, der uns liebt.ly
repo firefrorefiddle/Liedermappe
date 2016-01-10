@@ -1,3 +1,4 @@
+\language "deutsch"
 \header{
 	title = "Dem, der uns liebt"
 }
@@ -6,8 +7,13 @@
 \paper {
   #(set-paper-size "a4")
   margin=1.5\in
-}
-
+    fonts = #
+    (make-pango-font-tree
+     "Source Sans Pro Semibold"
+     "MS Shell Dlg 2"
+     "8514oem"
+     (/ (* staff-height pt) 2.5))
+  }
 \layout {
   indent = #0
   \context {
@@ -31,8 +37,7 @@ chExceptions = #( append
      \set chordNameLowercaseMinor = ##t
     \set chordNameExceptions = #chExceptions
      \germanChords
-
-
+     
    d2 a2:7 d1
     d2 d4:sus4 d4
     a1 b2:min a2 d2
@@ -66,12 +71,12 @@ chExceptions = #( append
      d2 e4( g4) fis4 a4\rest g4( e4)
      d2 cis2
      d2 a'4\rest d,4
-     d4(g4) b4( d4)
+     d4(g4) h4( d4)
      a2 fis4 d4
      a4 a4 d4 d4 cis2 a'4\rest e4
      a2 e2
      a4 e4 fis4 d4
-     cis2( b2)
+     cis2( h2)
      a2 b'2\rest
      d,2 d4 d4
      d4 d4 d2
