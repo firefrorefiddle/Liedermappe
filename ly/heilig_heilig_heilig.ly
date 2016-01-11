@@ -7,7 +7,12 @@
   #(set-paper-size "a4")
   margin=1.5\in
 }
-
+\layout {
+  \context {
+    \Score
+    \remove "Bar_number_engraver"
+  }
+}
 \layout {
   indent = #0
 }
