@@ -19,7 +19,7 @@ indent = #0
  }
  
 chExceptionMusic = {
-  <c f g>1-\markup { \super "4" }
+  <a d' e'>1-\markup { \super "4" }
 }
 
 chExceptions = #( append
@@ -36,51 +36,51 @@ chExceptions = #( append
      \germanChords
    \time 3/4
      
-     c1 c2. g2.:7 c2.
-     f2. c2.
-     c2 c4 g2 c4
-     c2. c2.
-     g2.:7 c2. f2. c2.
-     g2:7 c4 g2.
-     g2.:7 c2. c2. g2:sus4 g4
-     c2 f4 c2. f2 g4:7 c2. g2.:7 c2.
+     a1 a2. e2.:7 a2.
+     d2. a2.
+     a2. e2 a4
+     a2. a2.
+     e2.:7 a2. d2. a2.
+     d2. e2.
+     e2.:7 a2. a2. e2:sus4 e4
+     d2.a2. d2. a2. e2.:7 a2.
      
    }
      
      \new Staff <<
    \new Voice = "sopran"
-    \relative c' {
+    \relative c'' {
       \time 3/4
-      \key c \major  
+      \key a \major  
    
       
-      \partial 4 g'4
+      \partial 4 e,4
           
-      e2 f4 |
-      g2 c4 |
-      d4( c4) b4
-      c2 g4
-      a4 c4 a4
-      g2 e4
-      g4( f4) e4
-      d2 \breathe g4
-      e2 f4
-      g2 c4
-      d4( c4) b4
-      c2 g4
-      a4 c4 a4
-      g2 e4
+      cis2 d4 |
+      e2 a4 |
+      b4( a4) gis4
+      a2 e4
+      fis4 a4 fis4
+      e2 cis4
+      e4( d4) cis4
+      b2 \breathe e4
+      cis2 d4
+      e2 a4
+      b4( a4) gis4
+      a2 e4
+      fis4 a4 fis4
+      e2 cis4
       \slurUp
-      a4.( g8) f8( e8)
-      d2 g4
-      b2 g4
-      c2 g4
-      e'4( d4) c4
-      c2 b4
-      c4 b4 a4
-      g2 e4
-      a4( g4) f4
-      e2.( d2.) c2. \break
+      fis4.( e8) d8( cis8)
+      b2 e4
+      gis2 e4
+      a2 e4
+      cis'4( b4) a4
+      a2 gis4
+      a4 gis4 fis4
+      e2 cis4
+      fis4( e4) d4
+      cis2.( b2.) a2. \break
       \slurNeutral           
       \bar "|."     
       
@@ -133,34 +133,34 @@ chExceptions = #( append
     \new Voice = "alt"
     \relative  {
       \time 3/4
-      \key c \major  
+      \key a \major  
       \voiceTwo
       
-    \partial 4 e'4
-    c2 d4
-    e2 e4
-    f4( e4) f4
-    e2 e4
-    f4 f4 f4
-    e2 c4
-    d2 c4
-    b2 c4
-    c2 d4
-    e2 e4
-    f4( e4) f4
-    e2 e4
-    f4 f4 f4
-    e2 c4
-    f4.( e8) d8( c8)
-    b2 g'4
-    f2 f4
-    e2 e4
-    g4( f4) e4
-    e2 d4
-    c4 c4 c4
-    c2 c4
-    c2 b4
-    c2.( b2.) c2. \break
+    \partial 4 cis'4
+    a2 b4
+    cis2 cis4
+    d4( cis4) d4
+    cis2 cis4
+    d4 d4 d4
+    cis2 a4
+    b2 a4
+    gis2 a4
+    a2 b4
+    cis2 cis4
+    d4( cis4) d4
+    cis2 cis4
+    d4 d4 d4
+    cis2 a4
+    d4.( cis8) b8( a8)
+    gis2 e'4
+    d2 d4
+    cis2 cis4
+    e4( d4) cis4
+    cis2 b4
+    a4 a4 a4
+    a2 a4
+    a2 gis4
+    a2.( gis2.) a2. \break
       
       
            
@@ -169,56 +169,56 @@ chExceptions = #( append
   
   \new Staff <<
    \new Voice = "tenor"
-    \relative c'' {
+    \relative c' {
       \time 3/4
-      \key c \major  
+      \key a \major  
       \clef bass
    
       
-      \partial 4 g,4
-      g2 g4 g2 g4
-      g2 g4
-      g2 c4
-      c4 a4 c4 c2 g4
-      g2 g4
-      g2 \breathe g4 g2 g4
-      g2 g4 g2 g4
-      g2 c4
-      c4 a4 c4
-      c2 g4
-      g2 g4
-      g2 g4
-      d2 g4 g2 g4 g2 g4
-      g2 g4 e4 e4 f4
-      e2 g4 f4( e4) d4
-      g2.( f2.) e2.
+      \partial 4 e,4
+      e2 e4 e2 e4
+      e2 e4
+      e2 a4
+      a4 fis4 a4 a2 e4
+      e2 e4
+      e2 \breathe e4 e2 e4
+      e2 e4 e2 e4
+      e2 a4
+      a4 fis4 a4
+      a2 e4
+      e2 e4
+      e2 e4
+      b2 e4 e2 e4 e2 e4
+      e2 e4 cis4 cis4 d4
+      cis2 e4 d4( cis4) b4
+      e2.( d2.) cis2.
       
   \bar "|."
   
     }
   
    \new Voice = "bass"
-    \relative c {
+    \relative c' {
       \time 3/4
-      \key c \major  
+      \key a \major  
       \clef bass
    
       \stemDown
       \slurDown
-      \partial 4 c4
-      c2 c4 c2 c4
-      b4( c4) d4 c2 c4
-      f4 f4 f4 c2 c4
-      b2 c4 g2 e'4
-      c2 c4 c2 c4
-      b4( c4) d4 c2 c4
-      f4 f4 f4
-      c2 c4 b2 b8( c8)
-      g2 g4 g2 b4
-      c2 c4 c4( b4) c4
-      g2 g4
-      c4 c4 c4 c2 c4
-      f,4( g4) g4 g2.( g2.) c2.
+      \partial 4 a,4
+      a2 a4 a2 a4
+      gis4( a4) b4 a2 a4
+      d4 d4 d4 a2 a4
+      gis2 a4 e'2 cis4
+      a2 a4 a2 a4
+      gis4( a4) b4 a2 a4
+      d4 d4 d4
+      a2 a4 gis2 gis8( a8)
+      e'2 e4 e2 gis,4
+      a2 a4 a4( gis4) a4
+      e'2 e4
+      a,4 a4 a4 a2 a4
+      d4( e4) e4 e2.( e2.) a,2.
       \stemNeutral
       
     }
