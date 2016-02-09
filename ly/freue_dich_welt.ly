@@ -1,26 +1,57 @@
-\language "deutsch"
-\header{
-	title = "Freue dich, Welt"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
+}
+
   #(set-paper-size "a4")
-  margin=1.5\in
-    fonts = #
-    (make-pango-font-tree
-     "Source Sans Pro Semibold"
-     "MS Shell Dlg 2"
-     "8514oem"
-     (/ (* staff-height pt) 2.5))
-  }
+  
+
 \layout {
-  indent = #0
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
+
+
+\markup { \fontsize #8 \bold 511  {
+        
+        \italic \fontsize #8 \bold {\hspace#1 Freue dich, Welt}
+       
+        
+          }
+}
+  \markup { \hspace#10 T: I.Watts d.: J.Haas 1978 M: G.F.Händel }
+   \markup { \vspace #1 }
+
+
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
 
 \score {
   
@@ -52,21 +83,21 @@
      
       
       
-    d2 cis4. h8
+    d2 cis4. b8
     a2. g4
     fis2 e2
     d2. \breathe a'4
-    h2. h4 cis2. cis4
+    b2. b4 cis2. cis4
     d2. \breathe d4
-    d4( cis4) h4( a4)
+    d4( cis4) b4( a4)
     a4.( g8 fis4) d'4
-    d4( cis4) h4( a4)
+    d4( cis4) b4( a4)
     a4.( g8 fis4) \breathe fis4
     fis4 fis4 fis4 fis8( g8)
     a2. \breathe g8( fis8)
     e4 e4 e4 e8( fis8)
     g2. \breathe fis8( e8)
-    d4( d'2) h4
+    d4( d'2) b4
     a4.( g8 fis4) g4
     fis2 e2
     d1
@@ -155,7 +186,7 @@
       \clef bass
      
      a2 d4. d8
-     d2. h4
+     d2. b4
      a2. g4
      fis2. \breathe d'4
      d2. d4
@@ -169,7 +200,7 @@
      a2. \breathe a4
      a4 a4 a4 a8( g8)
      fis4( a2) \breathe d4
-     d2. h4
+     d2. b4
      a2 a4( g4) fis1
       
        \bar "|." 
@@ -232,8 +263,15 @@
    >>
    
   }
-				
-  
+	
+   \markup { \vspace #5 }
+	
+	
+\markup \abs-fontsize #10 { SCM Hänssler D-71087 Holzgerlingen} 
+
+   \markup { ___________________________________________________________________________________________________}
+
+
 
    
    

@@ -1,34 +1,55 @@
-\language "deutsch"
-\header{
-	title = "Dem, der uns liebt"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
+  top-margin = 1\cm
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
+}
+
   #(set-paper-size "a4")
-  margin=1.5\in
-    fonts = #
-    (make-pango-font-tree
-     "Source Sans Pro Semibold"
-     "MS Shell Dlg 2"
-     "8514oem"
-     (/ (* staff-height pt) 2.5))
-  }
+  
+
 \layout {
-  indent = #0
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
+
+\markup { \fontsize #8 \bold 504  {
+       
+        \italic \fontsize #8 \bold {\hspace#1 Dem, der uns liebt}
+        
+        }
+}
+  \markup { \hspace#10 \italic T:Offb1,5+6 M:C.Palmer, J.Löwen}
+   \markup { \vspace #1 }
+
 
 chExceptionMusic = {
   <c f g>1-\markup { \super "4" }
 }
 
+
 chExceptions = #( append
   ( sequential-music-to-chord-exceptions chExceptionMusic #t)
   ignatzekExceptions)
+
 
 \score {
  <<
@@ -37,7 +58,8 @@ chExceptions = #( append
      \set chordNameLowercaseMinor = ##t
     \set chordNameExceptions = #chExceptions
      \germanChords
-     
+
+
    d2 a2:7 d1
     d2 d4:sus4 d4
     a1 b2:min a2 d2
@@ -71,12 +93,12 @@ chExceptions = #( append
      d2 e4( g4) fis4 a4\rest g4( e4)
      d2 cis2
      d2 a'4\rest d,4
-     d4(g4) h4( d4)
+     d4(g4) b4( d4)
      a2 fis4 d4
      a4 a4 d4 d4 cis2 a'4\rest e4
      a2 e2
      a4 e4 fis4 d4
-     cis2( h2)
+     cis2( b2)
      a2 b'2\rest
      d,2 d4 d4
      d4 d4 d2
@@ -109,22 +131,22 @@ chExceptions = #( append
     a4 d4 cis4 d4
     cis2 cis4 cis4
     d2 cis4( e4)
-    d4 s4 h2
+    d4 s4 b2
     a2 a2 a2 s4 a4
-    h2 d2
+    b2 d2
     d2 d4 a4
     a4 a4 gis4 gis4 
     a2 s4 cis4
     cis2 cis2
-    e4 cis4 d4 h4
+    e4 cis4 d4 b4
     a2( gis2)
     a2 s2
     a2 cis4 cis4 
-    h4 h4 h2
-    h2 h2
+    b4 b4 b2
+    b2 b2
     a2 a2
     d2 c2
-    c4( h4) a4( h4)
+    c4( b4) a4( b4)
     a2 a2
     a2 s2
     cis1 d1 d2( cis2) a1
@@ -167,7 +189,7 @@ chExceptions = #( append
       a4 cis,4\rest g'2
       fis2 g2
       fis2 cis4\rest fis4
-      g2 g4( h4)
+      g2 g4( b4)
       fis2 a4 fis4
       e4 e4 e4 e4
       e2 cis4\rest a'4
@@ -182,7 +204,7 @@ chExceptions = #( append
       d2 d4( g4)
       fis2 g2
       fis2 e2\rest
-      e1 fis1 h2( a4 g4) 
+      e1 fis1 b2( a4 g4) 
       fis1
       
        \bar "|." 
@@ -204,7 +226,7 @@ chExceptions = #( append
     d4 s4 g,2
     a2 a2 d2 s4 d4
     d2 d2 d2 d4 d4
-    cis4 cis4 h4 h4
+    cis4 cis4 b4 b4
     a2 s4 a4
     a2 a2
     cis4 a4 d4 d4
@@ -231,7 +253,12 @@ chExceptions = #( append
   }
 				
   
+\markup \abs-fontsize #10 { public domain} 
 
+   \markup { ___________________________________________________________________________________________________}
+
+   
+   
    
    
    

@@ -1,25 +1,55 @@
-\header{
-	title = "Noch haben wir sie nicht geseh´n"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
+}
+
   #(set-paper-size "a4")
-  margin=1.5\in
-    fonts = #
-    (make-pango-font-tree
-     "Source Sans Pro Semibold"
-     "MS Shell Dlg 2"
-     "8514oem"
-     (/ (* staff-height pt) 2.5))
-  }
+  
+
 \layout {
-  indent = #0
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
+
+\markup { \fontsize #8 \bold 512  {
+        
+        \italic \fontsize #8 \bold {\hspace#1 Noch haben wir sie nicht gesehn}
+                
+          }
+}
+  \markup { \hspace#10 T/M: F.Price, dt.M.Siebald}
+   \markup { \vspace #1 }
+
+
+chExceptionMusic = {
+  <a, d e>1-\markup { \super "4" }
+}
+
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
 
 \score {
   
@@ -31,44 +61,43 @@
  \time 4/4
 \germanChords
 
-    f4
-    f1 a1:min bes1 c1
-    f1 d1:min g1:min c1
-    f1 a1:min bes1 c1
-    f1 d1:min g1:min g1:min
-    c1 c1:7 f2 bes2 f1
+    d4
+    d1 fis1:min g1 a1
+    d1 b1:min e1:min a1
+    d1 fis1:min g1 a1
+    d1 b1:min e1:min e1:min
+    a1 a1:7 d2 g2 d1
     
   
   }
   
    \new Staff <<
    \new Voice = "sopran"
-    \relative c' {
+    \relative c'' {
       \time 4/4
-      \key f \major 
+      \key d \major 
       \voiceOne
       
-      \partial 4 c'4
-      c4 c4 c4. c8
-      c4 c8 c4. c4
-      c4 bes4 a4 bes8 c8( c2.) bes4
+      \partial 4 a4
       a4 a4 a4. a8
-      a4 a8 a4. c4
-      bes4 a4 g4 f4
-      g2. b8\rest c8
-      c4 c4 c4. c8
-      c4 c8 c4. c4 
-      c4 bes4 a4 bes8 c8( c2 c4) bes4
       a4 a8 a4. a4
-      a4 a8 a4. bes4
-      a4 a4 g4 f8 g8( g2.) g4
-      g4 g4 g8 f4.
-      g2 a2
-      g4 f4 f8 f4.
-      f2.
+      a4 g4 fis4 g8 a8( a2.) g4
+      fis4 fis4 fis4. fis8
+      fis4 fis8 fis4. a4
+      g4 fis4 e4 d4
+      e2. gis8\rest a8
+      a4 a4 a4. a8
+      a4 a8 a4. a4 
+      a4 g4 fis4 g8 a8( a2 a4) \slurDashed g8( g8) \slurSolid
+      fis4 fis8 fis4. fis4
+      fis4 fis8 fis4. g4
+      fis4 fis4 e4 d8 e8( e2.) e4
+      e4 e4 e8 d4.
+      e2 fis2
+      e4 d4 d8 d4.
+      d2.s4
         
       \bar "|."    
-      
       
     }
     
@@ -81,8 +110,8 @@
      Noch neh -- men wir für un -- re Hoff -- nung 
      Spott und Hohn in Kauf
      und wis -- sen doch: es kommt ein Tag,
-     da hört das War -- ten auf, _________
-     denn g´rade dann wenn je -- der -- mann
+     da hört das War -- ten auf, 
+     denn g´ra -- de dann wenn je -- der -- mann
      es nicht für mö -- glich hält,
      dann wer -- den wir sie se -- hen,
      Got -- tes neu -- e Welt.
@@ -112,7 +141,7 @@
    
    Dann ken -- nen wir das Wann, War -- rum, 
    Wie -- lange und Wo -- her,
-   dann quä -- len tau - send un -- ge -- lös -- te
+   dann quä -- len tau -- send un -- ge -- lös -- te
    Fra -- gen uns nicht mehr;
    denn uns -- re letz -- te Ant -- wort ist uns
    Chris -- tus, un -- ser Herr,
@@ -128,33 +157,30 @@
   \set stanza = "4."
   
   Noch war -- ten wir da -- rauf,
-  noch ha -- ben wir sie nicht ge - sehn.
+  noch ha -- ben wir sie nicht ge -- sehn.
   noch ha -- ben wir in die -- ser Welt
   ein Le -- ben zu be -- stehn.
   Schon heu -- te soll in un -- srem Le -- ben
   Got -- tes Wort ge -- schehn,
-  denn so na -- he sich ein je -- der hier an 
+  denn_so na -- he sich ein je -- der hier an 
   Got -- tes Wor -- te hält,
-  ge - nau so na -- he ist er
-  Got -- ts neu -- er Welt.
+  ge -- nau so na -- he ist er
+  Got -- tes neu -- er Welt.
   
   }
 
-
-  
-   
    >>
-  
- 
-   
-   
-   
- 
-    
-   >>
+     >>
    
   }
 				
+
+   \markup { \vspace #3 }
+
+
+    \markup \abs-fontsize #10 {Communique Music - für D,A,CH: Rudolf Slezak Musikverlag, Hamburg} 
+
+   \markup { ___________________________________________________________________________________________________}
   
 
    

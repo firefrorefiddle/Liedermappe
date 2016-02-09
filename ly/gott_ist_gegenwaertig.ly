@@ -32,16 +32,19 @@
 }
 \markup { ___________________________________________________________________________________________________}
 
-\markup { \fontsize #8 \bold 510 {
-       
-        \italic \fontsize #8 \bold {\hspace#1 Wunderbarer König}
+
+
+
+\markup { \fontsize #8 \bold 502 {
         
+        \italic \fontsize #8  {\hspace#1 Gott ist gegenwärtig}
+       
         
           }
 }
-  \markup { \hspace#10 T/M: J.Neander}
-   \markup { \vspace #1 }
 
+  \markup { \hspace#10 T: G.Tersteegen M: J.Neander}
+   \markup { \vspace #1 }
 
 chExceptionMusic = {
   <c f g>1-\markup { \super "4" }
@@ -110,35 +113,43 @@ chExceptions = #( append
     
    \new Lyrics \lyricsto "sopran" {  
 
-   Wun -- der -- ba -- rer Kö -- nig, Herr -- scher von uns al -- len, 
-   lass dir un -- ser Lob ge -- fal -- len!
-   Dei -- ne Va -- ter -- gü -- te hast du las -- sen flies -- sen,
-   ob wir schon dich oft ver -- lies -- sen.
-   Hilf uns noch, stärk uns doch!
-   Lass die Zun -- ge sin -- gen,
-   lass die Stim -- me kling -- gen!
+   Gott ist ge -- gen -- wär -- tig,
+   las -- set uns an -- be -- ten
+   und in Ehr -- furcht vor ihn tre -- ten.
+   Gott ist in der Mit -- ten!
+   Al -- les in uns schwei -- ge
+   und sich in -- nigst vor ihm beu -- ge.
+   Wer ihn kenn, wer ihn nennt,
+   schlag die Aug -- gen nie -- der;
+   kommt, er -- gebt euch wie -- der!
    
   }
   
 \new Lyrics \lyricsto "sopran" {
     
-    Him -- mel, lo -- be präch -- tig dei -- nes Schöp -- fers Wer -- ke
-    mehr als al -- ler Men -- schen Stär -- ke!
-    Gros -- ses Licht der Son -- ne schies -- se dei -- ne Strah -- len,
-    die das gros -- se Rund be -- ma -- len!
-    Lo -- bet gern, Mond und Stern,
-    seid be -- reit zu eh -- ren, einen sol - chen Her -- ren!
+    Gott ist ge -- gen -- wär -- tig,
+    dem die Che -- ru -- bi -- nen
+    Tag und Nacht ge -- bük -- ket die -- nen.
+    ´Hei -- lig, hei -- lig, hei -- lig!´
+    sin -- gen ihm zur Eh -- re
+    al -- ler En -- gel ho -- he Chö -- re.
+    Herr ver -- nimm un -- sre Stimm,
+    da auch wir Ge -- rin -- gen
+    un -- sre Op -- fer brin -- gen.
    
   }
   
 \new Lyrics \lyricsto "sopran" {
     
-  Hal -- le -- lu -- ja brin -- ge, wer den Her -- ren ken -- net,
-  wer den Her -- ren Je -- sus lie -- bet.
-  Hal -- le -- lu -- ja sin -- ge, wel -- cher Chris -- tus nen -- net,
-  sich von Her -- zen ihm er -- gi -- bet.
-  O wohl dir! Glau -- be mir: End -- lich wirst du dro -- ben
-  oh -- ne Sünd ihn lo -- ben.
+  Du durch -- drin -- gest al -- les;
+  lass dein schöns -- tes Lich -- te,
+  Herr, be -- rüh -- ren mein Ge -- sich -- te!
+  Wie die zar -- ten Blu -- men
+  wil -- lig sich ent -- fal -- ten
+  und der Son -- ne stil -- le -- hal -- ten,
+  lass mich so, still und froh,
+  dei -- ne Strah -- len fas -- sen
+  und dich wir -- ken las -- sen!
 
 }
 
@@ -246,12 +257,7 @@ chExceptions = #( append
   >>
   }
 				
-  \markup \abs-fontsize #10 { public domain} 
-
-   \markup { ___________________________________________________________________________________________________}
-
-   
-   
+  
 
    
    

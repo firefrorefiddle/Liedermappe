@@ -1,20 +1,56 @@
-\header{
-	title = "Großer Gott wir loben dich"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
-  #(set-paper-size "a4")
-  margin=1.5\in
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
 }
 
+  #(set-paper-size "a4")
+  
+
 \layout {
-  indent = #0
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
+
+\markup { \fontsize #8 \bold 402 {
+        
+        \italic \fontsize #8  { Großer Gott wir loben dich}
+        
+        
+          }
+}
+
+  \markup { \hspace#10 T: 4.Jh, dt.: I.Franz (1719-1790) M: Wien 1776, H.Bone 1852}
+  \markup { \vspace #1 } 
+
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
 
 \score {
   
@@ -112,7 +148,7 @@
       \time 6/4
       \key g \major 
       \clef bass
-      \voiceThree
+      \voiceFour
       
 
       g2 b4 d4( c4) b4    | d4( e4) d4 g2 d4\rest  |
@@ -120,10 +156,26 @@
       g,2 b4 d4( c4) b4    | d4( e4) d4 g2 d4\rest  |
       g,4( g'4) fis4 e4( c4) b4 | c2 cis4 d4 d4 d4\rest  |
       
-      c2 b4 a4( g4) d'4    | g4( fis4) e4 b2 a4\rest         |
+      c2 b4 a4( g4) d'4    | g4( fis4) e4 b2 d4\rest         |
       c4( e4) fis4 g4  ( d4) e8( d8) c4( d4) d4   | g,2.     |
       
       \bar "|."       
+    }
+    
+    \new Voice = "tenor"
+    \relative c {
+      \time 6/4
+      \key g \major 
+      \clef bass
+      \voiceThree
+      
+
+     d2 g4 g4( a4) g4 fis4( g4) fis4 g2 s4  |
+     g2 a4 g2 g4 g4( a4) g4 g4 fis4 s4
+     d2 g4 g4( a4) g4 fis4( g4) fis4 g2 s4  |
+     g2 a4 g2 g4 g4( a4) g4 g4 fis4 s4
+     e4( fis4) g4 fis4( g4) fis4 g2 e'4 d2 s4
+     c2 c4 b4( a4) g4 e'4( d4) d8( c8) b2.
     }
   >>
  
@@ -131,7 +183,11 @@
   }
 				
   
+ \markup \abs-fontsize #10 { public domain} 
 
+   \markup { ___________________________________________________________________________________________________}
+
+   
    
    
    

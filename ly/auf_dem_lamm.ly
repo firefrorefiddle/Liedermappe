@@ -1,17 +1,24 @@
-\header{
-	title = "Auf dem Lamm ruht meine Seele"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
+}
+
   #(set-paper-size "a4")
-  margin=1.5\in
-}
-
-\layout {
-  indent = #0
-}
-
+  
 
 \layout {
   \context {
@@ -19,11 +26,26 @@
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
 
+\markup { \fontsize #8 \bold 404 {
+        
+        \hspace#1 \italic \fontsize #8  { Auf dem Lamm ruht meine Seele}
+        
+        
+          }
+}
 
+  \markup { \hspace#10 T: J.A.v.Poseck M: W.Brockhaus}
+  \markup { \vspace #1 } 
 chExceptionMusic = {
   <c f g>1-\markup { \super "4" }
 }
+
 
 chExceptions = #( append
   ( sequential-music-to-chord-exceptions chExceptionMusic #t)
@@ -214,6 +236,9 @@ chExceptions = #( append
   }
 				
   
+ \markup \abs-fontsize #10 { public domain} 
+
+   \markup { ___________________________________________________________________________________________________}
 
    
    

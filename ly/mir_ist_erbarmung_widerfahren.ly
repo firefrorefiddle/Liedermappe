@@ -1,26 +1,56 @@
-\header{
-	title = "Mir ist Erbarmung widerfahren"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
+}
+
   #(set-paper-size "a4")
-  margin=1.5\in
-    fonts = #
-    (make-pango-font-tree
-     "Source Sans Pro Semibold"
-     "MS Shell Dlg 2"
-     "8514oem"
-     (/ (* staff-height pt) 2.5))
-  }
+  
+
 \layout {
-  indent = #0
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
 
+\markup { \fontsize #8 \bold 501  {
+        
+        \italic \fontsize #8 \bold {\hspace#1 Mir ist Erbarmung widerfahren}
+                
+          }
+}
+  \markup { \hspace#10 T: P.Hiller M: G.Neumark}
+   \markup { \vspace #1 }
+
+ 
+
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
 \score {
   
   <<
@@ -106,8 +136,7 @@
   
   Ich hat -- te nichts als Zorn ver -- die -- net
   und soll bei Gott in Gna -- den sein!
-  Gott hat mich mit sich selbst ver -- süh -
-  - net
+  Gott hat mich mit sich selbst ver -- süh -- net
   uns macht durchs Blut des Sohns mich rein.
   Wo kam dies her, wa -- rum ge -- schiecht´s?
   Er -- bar -- mung ist´s und wei -- ter nichts. 
@@ -141,21 +170,21 @@
   }
 
 
-  
    
    >>
   
- 
-   
-   
-   
- 
-    
+     
    >>
    
   }
 				
-  
+     \markup { \vspace #1 }
+
+ \markup \abs-fontsize #10 { public domain} 
+
+   \markup { ___________________________________________________________________________________________________}
+
+   
 
    
    

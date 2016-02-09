@@ -1,20 +1,57 @@
-\header{
-	title = "In Ihm ist alles, was ich brauch'"
-}
+
+
+
+  
 \version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
-  #(set-paper-size "a4")
-  margin=1.5\in
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
 }
 
+  #(set-paper-size "a4")
+  
+
 \layout {
-  indent = #0
   \context {
     \Score
     \remove "Bar_number_engraver"
   }
 }
+\layout {
+  indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
+
+
+\markup { \fontsize #8 \bold 409 {
+        
+         \italic \fontsize #8 \bold {\hspace#1 In ihm ist alles was ich brauch}
+        
+        
+          }
+}
+ 
+  \markup {\hspace#10 T/M: H.Masuch}
+  \markup { \vspace #1 }
+
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
 
 \score {
   
@@ -169,7 +206,7 @@ a2. a4\rest | % z4
       e4 e2 a4 |
       a a2 a8 a |
       a1( |
-      a2.) r4 | % z1
+      a2.) e4\rest | % z1
       e4 e2 a4 |
       a4 a2 a8 a |
       b2( b8)( a b a |
@@ -190,8 +227,12 @@ a2. a4\rest | % z4
  
    >>
   }
-				
-  
+	
+	
+
+ \markup \abs-fontsize #10 { public domain} 
+
+   \markup { ___________________________________________________________________________________________________}
 
    
    

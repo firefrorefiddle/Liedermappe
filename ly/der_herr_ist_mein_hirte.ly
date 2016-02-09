@@ -1,20 +1,60 @@
 
-\version "2.16.2"
-% automatically converted by musicxml2ly from derHerrIstMeinHirte.xml
 
-\header {
-    title = "Der Herr ist mein Hirte"
-    }
+
+  
+\version "2.16.2"
+\header { tagline = ##f }
 
 \paper {
-  #(set-paper-size "a4")
-  margin=3.5\in
+  top-margin = 1\cm
+  
+  
+  fonts = #
+  (make-pango-font-tree
+   "Source Sans Pro Semibold"
+   "MS Sans Serif"
+   "8514oem"
+   (/ (* staff-height pt) 2.5))
 }
+
+  #(set-paper-size "a4")
+  
 
 \layout {
+  \context {
+    \Score
+    \remove "Bar_number_engraver"
+  }
+}
+\layout {
   indent = #0
+ 
+}
+\markup { ___________________________________________________________________________________________________}
+
+
+
+
+
+\markup { \fontsize #8 \bold 413 {
+        
+        \italic \fontsize #8 \bold {\hspace#1 Der Herr ist mein Hirte}
+        
+        
+          }
 }
 
+  \markup { \hspace#10 T/M: Keith&Melody Green}
+   \markup { \vspace #1 }
+
+chExceptionMusic = {
+  <c f g>1-\markup { \super "4" }
+}
+
+
+chExceptions = #( append
+  ( sequential-music-to-chord-exceptions chExceptionMusic #t)
+  ignatzekExceptions)
 
 Ref = \lyricmode {
   Fol -- gen wer -- den mir Huld und Gü -- te all mein gan -- zes Le -- ben lang
@@ -263,3 +303,12 @@ AkkordeB =
 
 }
 
+   \markup { \vspace #8 }
+
+
+    \markup \abs-fontsize #10 {1982 by Universal Music - MGB Songs, Birdwing Music and Ears To Hear Music} 
+
+   \markup { ___________________________________________________________________________________________________}
+
+   
+   
