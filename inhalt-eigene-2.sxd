@@ -1,11 +1,20 @@
 TITLE INDEX DATA FILE
+*Thank you heavenly Father, I\GenericError {(inputenc) }{Package inputenc Error: Unicode char ´ (U+B4)\MessageBreak not set up for use with LaTeX}{See the inputenc package documentation for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}m so glad that Jesus lives in my house
+1
+song1-1.1
 Jesus in my house
 1
 song1-1.1
+*Weise mir, Herr, deinen Weg
+2
+song1-2.1
 Viele Wege gibt es auf dieser Welt
 2
 song1-2.1
-Für den König
+*Alle Ehre K\IeC {\"o}nig Jesus
+3
+song1-3.1
+F\IeC {\"u}r den K\IeC {\"o}nig
 3
 song1-3.1
 Die Herrlichkeit des Herrn
@@ -14,10 +23,13 @@ song1-4.1
 Jesus lebt, er hat gesiegt
 5
 song1-5.1
+*Du bist du
+6
+song1-6.1
 Vergiss es nie
 6
 song1-6.1
-Zünde an dein Feuer
+Z\IeC {\"u}nde an dein Feuer
 7
 song1-7.1
 Der Herr ist mein Hirte
@@ -26,16 +38,25 @@ song1-8.1
 I want to praise you, Lord
 9
 song1-9.1
+*He came, he saw, he surrendered all
+10
+song1-10.1
 The Nazarene
 10
 song1-10.1
+*What Can Be Done
+11
+song1-11.1
 My eyes are dry
 11
 song1-11.1
 Let us adore
 12
 song1-12.1
-Jesus will uns bau’n zu einem Tempel
+*Der Tempel
+13
+song1-13.1
+Jesus will uns bau\IeC {\textquoteright }n zu einem Tempel
 13
 song1-13.1
 Ich bin bei dir
@@ -44,6 +65,9 @@ song1-14.1
 Ich will dich erheben
 15
 song1-15.1
+*Hard Times
+16
+song1-16.1
 Is the rain
 16
 song1-16.1
@@ -68,37 +92,49 @@ song1-22.1
 Wohin sonst
 23
 song1-23.1
-Wie viel schöne Stunden
+Wie viel sch\IeC {\"o}ne Stunden
 24
 song1-24.1
 Du bist erhoben
 25
 song1-25.1
-Nähme ich Flügel der Morgenröte
+N\IeC {\"a}hme ich Fl\IeC {\"u}gel der Morgenr\IeC {\"o}te
 26
 song1-26.1
 The servant king
 27
 song1-27.1
+*You did not wait for me
+28
+song1-28.1
 I'm forever grateful
 28
 song1-28.1
+*My Jesus, my Savior
+29
+song1-29.1
 Shout to the Lord
 29
 song1-29.1
-Jesus Christus starb für mich
+*Herr, ich danke dir, dass du mich liebst
 30
 song1-30.1
+Jesus Christus starb f\IeC {\"u}r mich
+30
+song1-30.1
+*Lamb of God
+31
+song1-31.1
 All in All
 31
 song1-31.1
 Love the Lord
 32
 song1-32.1
-Allein deine Gnade genügt
+Allein deine Gnade gen\IeC {\"u}gt
 33
 song1-33.1
-Der Lastenträger
+Der Lastentr\IeC {\"a}ger
 34
 song1-34.1
 Heart of Worship
@@ -107,6 +143,9 @@ song1-35.1
 This is My Desire
 36
 song1-36.1
+*Vater ich will dir danken
+37
+song1-37.1
 Zeichen deiner Liebe
 37
 song1-37.1
@@ -116,10 +155,16 @@ song1-38.1
 Wie ein Hirsch
 39
 song1-39.1
+*Thank you, oh my Father
+40
+song1-40.1
 There is a Redeemer
 40
 song1-40.1
-Oh Lord, you’re beautiful
+*Lord you're Beautiful
+41
+song1-41.1
+Oh Lord, you\IeC {\textquoteright }re beautiful
 41
 song1-41.1
 Fear not
@@ -140,18 +185,30 @@ song1-46.1
 Steh mir vor Augen
 47
 song1-47.1
+*Wer ist ein Gott wie du
+48
+song1-48.1
 Du hast Erbarmen
 48
 song1-48.1
 Lass mir das Ziel vor Augen bleiben
 49
 song1-49.1
+*Oh God, you are my God
+50
+song1-50.1
 Step by step
 50
 song1-50.1
+*In deinem liebenden Arm
+51
+song1-51.1
 Ich singe dir ein Liebeslied - Arms Of Love
 51
 song1-51.1
+*Over all the earth, Reign in me
+52
+song1-52.1
 Lord, reign in me
 52
 song1-52.1
@@ -173,15 +230,24 @@ song1-57.1
 Unser Herr ist ein ewiger Gott
 58
 song1-58.1
+*Warum warte ich so wenig
+59
+song1-59.1
 Du kommst wieder
 59
 song1-59.1
+*Here I am to worship
+60
+song1-60.1
 Light of the world
 60
 song1-60.1
 Who am I
 61
 song1-61.1
+*Lord The Light Of Your Love
+62
+song1-62.1
 Shine, jesus shine
 62
 song1-62.1
@@ -194,10 +260,10 @@ song1-64.1
 Above All
 65
 song1-65.1
-Herr, im Glanz deiner Majestät
+Herr, im Glanz deiner Majest\IeC {\"a}t
 66
 song1-66.1
-Schöpfer aller Himmel
+Sch\IeC {\"o}pfer aller Himmel
 67
 song1-67.1
 Herr, halte mich nah bei dir
@@ -206,28 +272,40 @@ song1-68.1
 Ich danke meinem Gott
 69
 song1-69.1
+*Morgend\IeC {\"a}mmerung
+70
+song1-70.1
 Diese Macht hat das Kreuz
 70
 song1-70.1
-Du König Jahwe
+Du K\IeC {\"o}nig Jahwe
 71
 song1-71.1
 Wie tief muss Gottes Liebe sein
 72
 song1-72.1
-How Deep the Father’s Love for Us
+How Deep the Father\IeC {\textquoteright }s Love for Us
 73
 song1-73.1
+*So ist Vers\IeC {\"o}hnung
+74
+song1-74.1
 Wie ein Fest nach langer Trauer
 74
 song1-74.1
-Die Majestät legtest du ab
+*You laid aside your majesty
 75
 song1-75.1
+Die Majest\IeC {\"a}t legtest du ab
+75
+song1-75.1
+*I Really Want To Worship You My Lord
+76
+song1-76.1
 You laid aside your majesty
 76
 song1-76.1
-All die Fülle ist in dir
+All die F\IeC {\"u}lle ist in dir
 77
 song1-77.1
 Du bist der Weg
@@ -245,9 +323,15 @@ song1-81.1
 Lord, I Lift Your Name on High
 82
 song1-82.1
+*What Can Be Done
+83
+song1-83.1
 My eyes are dry
 83
 song1-83.1
+*Every Blessing You Pour Out
+84
+song1-84.1
 Blessed be your name
 84
 song1-84.1
