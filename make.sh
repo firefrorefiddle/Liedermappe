@@ -18,9 +18,15 @@ pdflatex tex/Jugend_OH
 pdflatex tex/Gemeinde
 pdflatex tex/Gemeinde_TO
 pdflatex tex/Gemeinde_OH
+pdflatex tex/Eigene_Mappe
+pdflatex tex/Eigene_Mappe_2
+pdflatex tex/Eigene_Mappe_3
 
 songidx inhalt-jugend.sxd inhalt-jugend.sbx
 songidx inhalt-gemeinde.sxd inhalt-gemeinde.sbx
+songidx inhalt-eigene.sxd inhalt-eigene.sbx
+songidx inhalt-eigene.sxd inhalt-eigene-2.sbx
+songidx inhalt-eigene.sxd inhalt-eigene-3.sbx
 
 if [ $? -lt 127 ]
 then 
@@ -56,4 +62,8 @@ mv Jugend_OH.pdf out
 mv Gemeinde.pdf out
 mv Gemeinde_TO.pdf out
 mv Gemeinde_OH.pdf out
+mv Eigene_Mappe.pdf out
+mv Eigene_Mappe_2.pdf out
+mv Eigene_Mappe_3.pdf out
+
 rm -f *.aux *.log
