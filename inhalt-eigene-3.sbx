@@ -1,6 +1,6 @@
 \begin{idxblock}{M}
-\idxaltentry{My Jesus, my Savior}{\songlink{song1-1.1}{1}}
+\idxaltentry{My Jesus, my Savior}{\hyperlink{song1-1.1}{1}}
 \end{idxblock}
 \begin{idxblock}{S}
-\idxentry{Shout to the Lord}{\songlink{song1-1.1}{1}}
+\idxentry{Shout to the Lord}{\hyperlink{song1-1.1}{1}}
 \end{idxblock}
