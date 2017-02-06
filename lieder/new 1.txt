@@ -1,0 +1,6 @@
+
+songidx inhalt-jugend.sxd inhalt-jugend.sbx
+songmaker lieder
+pdflatex tex/Jugend
+move Jugend.pdf out
+del -f *.aux *.log
